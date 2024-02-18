@@ -76,3 +76,25 @@ print('Division integer part: $divisionIntegerPart');
 
 int restOfDivision = number1 % number2;</br>
 print('Rest of division: $restOfDivision');
+
+## Increment/ decrement variables (++, --):
+
+int val;</br>
+val = 10;
+
+val = val + 1; // Increment one to val</br>
+print(val);</br>
+val += 2; // Increment two to val</br>
+print(val);
+
+val = val - 2; // Decrement two to val</br>
+print(val);</br>
+val -= 1; // Decrement one to val
+
+print(val++); // Print content val and increment</br>
+print(val);</br>
+print(++val); // Increment and print content val
+
+print(val--); // Print content val and decrement</br>
+print(val);</br>
+print(--val); // Decrement and print content val
