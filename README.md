@@ -194,7 +194,3 @@ int yourAge = 40;
 
 print(yourAge > 59 ? 'You are elderly' : 'You don\'t elderly');
 ~~~
-
-print('');
-~~~Dart
-~~~
