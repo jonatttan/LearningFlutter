@@ -194,3 +194,27 @@ int yourAge = 40;
 
 print(yourAge > 59 ? 'You are elderly' : 'You don\'t elderly');
 ~~~
+
+## Conditionals (switch)
+
+~~~Dart
+String environment = 'prod';
+
+switch(environment) {
+    case 'homolog':
+      print('Set HOMOLOG environment');
+      break;
+    
+    case 'prod':
+      print('Set PROD environment');
+      break;
+
+    default:
+      print('Set other environment');
+      break;
+}
+~~~
+
+print('');
+~~~Dart
+~~~
