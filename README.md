@@ -98,3 +98,18 @@ print(++val); // Increment and print content val
 print(val--); // Print content val and decrement</br>
 print(val);</br>
 print(--val); // Decrement and print content val
+
+## Conditional (if, else if, else):
+~~~Dart
+int valParameter = 20;
+int valToCompare;
+valToCompare = 10;
+
+if(valToCompare == valParameter) {
+  print('Value to compare equals to parameter value');
+} else if(valToCompare > valParameter) {
+  print('Value to compare is greater than parameter value');
+} else {
+  print('Value to be compared is less than the parameter value');
+}
+~~~
