@@ -91,7 +91,7 @@ int restOfDivision = number1 % number2;
 print('Rest of division: $restOfDivision');
 ~~~
 
-## Increment/ decrement variables (++, --):
+## Increment/ decrement variables (++, --)
 
 ~~~Dart
 int val;
@@ -115,7 +115,9 @@ print(val);
 print(--val); // Decrement and print content val
 ~~~
 
-## Conditional (if, else if, else):
+## Conditionals (if, else if, else)
+
+### Conditionals - Compare two values:
 ~~~Dart
 int valParameter = 20;
 int valToCompare;
@@ -128,4 +130,71 @@ if(valToCompare == valParameter) {
 } else {
   print('Value to be compared is less than the parameter value');
 }
+~~~
+
+### Conditionals - Compare one boolean parameter:
+~~~Dart
+bool wantGoToShopping = true;
+
+if(wantGoToShopping) {
+  print('I want go to shopping');
+} else {
+  print('I do not want go to shopping');
+}
+~~~
+
+### Conditionals - Compare two parameters using AND (&&):
+~~~Dart
+bool wantGoToShopping = true;
+double money = 8;
+
+if(wantGoToShopping && money > 9) {
+  print('I go to shopping');
+} else {
+  print('I do not go to shopping');
+}
+~~~
+
+### Conditionals - Compare two or more parameters using OR (&&):
+~~~Dart
+bool havePhysicalDisability;
+bool arePregnant;
+
+havePhysicalDisability = true;
+arePregnant = false;
+
+if(havePhysicalDisability || arePregnant) {
+  print('Preferential ticket');
+} else {
+  print('Normal ticket');
+}
+~~~
+
+Add check elderly people:
+
+~~~Dart
+bool havePhysicalDisability;
+bool arePregnant;
+int age;
+
+age = 60;
+havePhysicalDisability = false;
+arePregnant = false;
+
+if(havePhysicalDisability || arePregnant || age >= 60) {
+  print('Preferential ticket');
+} else {
+  print('Normal ticket');
+}
+~~~
+
+### Conditionals - Ternary conditional:
+~~~Dart
+int yourAge = 40;
+
+print(yourAge > 59 ? 'You are elderly' : 'You don\'t elderly');
+~~~
+
+print('');
+~~~Dart
 ~~~
