@@ -215,6 +215,69 @@ switch(environment) {
 }
 ~~~
 
-print('');
+
+## Repeat loop
+
+### Repeat loop with for:
+With increment
 ~~~Dart
+for(int i = 0; i<= 10; i++) {
+  print('Value is $i');
+}
+~~~
+
+With decrement
+~~~Dart
+for(int i = 10; i>= 0; i--) {
+  print('Value is $i');
+}
+~~~
+
+### Repeat loop with while:
+~~~Dart
+int toIncrement = 1;
+
+while(toIncrement <= 10) {
+  print('toIncrement value is: $toIncrement');
+  toIncrement++;
+}
+~~~
+
+~~~Dart
+bool control = true;
+int counter = 1;
+
+while(control) {
+  print('counter value is $counter');
+  counter++;
+
+  if(counter > 10) {
+    control = false;
+  }
+
+}
+~~~
+
+### Repeat loop with do while:
+~~~Dart
+int executeCounter = 10;
+
+do {
+  print(executeCounter);
+  executeCounter--;
+} while(executeCounter >= 0);
+~~~
+
+~~~Dart
+int executeCounter = 10;
+bool executeControl = true;
+
+do {
+  print(executeCounter);
+  executeCounter--;
+
+  if(executeCounter <= -1) {
+    executeControl = false;
+  }
+} while(executeControl);
 ~~~
