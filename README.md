@@ -281,3 +281,88 @@ do {
   }
 } while(executeControl);
 ~~~
+
+## Procedures and functions
+
+Both are declared outside the main function, but called inside.
+
+### Procedures:
+Remember, with arguments or not, if don't return values, they are procedures.
+
+~~~Dart
+printAnimal('Dog');
+printAnimal('Cat');
+printAnimalAndAge('Horse', 8);
+
+void printAnimal(String animal) {
+  print('The animal is: ' + animal);
+}
+
+void printAnimalAndAge(String animal, int age) {
+  print('The animal is: $animal, have $age years old');
+}
+~~~
+
+// With optional parameter
+
+~~~Dart
+printAnimalAndAge('Horse', age: 8);
+printAnimalAndAge('Monkey');
+
+
+void printAnimalAndAge(String animal, {int? age}) {
+  String ageInfo = age != null ? ', have $age years old' : '.';
+  print('The animal is: $animal$ageInfo');
+}
+~~~
+
+// In one line
+
+~~~Dart
+printOption(true);
+
+void printOption(bool state) => print(state ? 'Allow' : 'Block');
+~~~
+
+
+### Functions:
+Remember, with arguments or not, if return values, they are procedures.
+
+~~~Dart
+int value = 8;
+
+print('The double of $value is ' + multiplicationByTwo(value).toString());
+
+int multiplicationByTwo(int param1) {
+  return param1 * 2;
+}
+~~~
+
+~~~Dart
+int useValue = 7;
+
+print('$useValue is even?: ' + evenNumber(useValue).toString());
+
+bool evenNumber(int value) {
+  return value % 2 == 0;
+}
+~~~
+
+// With optional parameter
+
+~~~Dart
+print(productDescription('Egs'));
+print(productDescription('Bread', obs: 'Contain milk'));
+
+String productDescription(String name, {String obs=''}) {
+  return 'Product name: $name \n$obs';
+}
+~~~
+
+// In one line
+
+~~~Dart
+print(showOptionDescription(43));
+
+String showOptionDescription(int code) => (code == 34 ? 'Open' : 'Close');
+~~~
