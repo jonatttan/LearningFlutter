@@ -282,12 +282,12 @@ do {
 } while(executeControl);
 ~~~
 
-## Procedures and functions
+## Procedures (method and functions)
 
 Both are declared outside the main function, but called inside.
 
-### Procedures:
-Remember, with arguments or not, if don't return values, they are procedures.
+### Methods:
+Remember, with arguments or not, if procedure don't return values, they are method.
 
 ~~~Dart
 printAnimal('Dog');
@@ -326,7 +326,7 @@ void printOption(bool state) => print(state ? 'Allow' : 'Block');
 
 
 ### Functions:
-Remember, with arguments or not, if return values, they are procedures.
+Remember, with arguments or not, if procedure return values, they are function.
 
 ~~~Dart
 int value = 8;
@@ -365,4 +365,33 @@ String productDescription(String name, {String obs=''}) {
 print(showOptionDescription(43));
 
 String showOptionDescription(int code) => (code == 34 ? 'Open' : 'Close');
+~~~
+
+## Objects in Dart
+
+~~~Dart
+// Instantiating object
+Car beetle = new Car();
+
+// Configuring object
+beetle.model = 'New Beetle';
+beetle.hp = 120;
+beetle.year = 2015;
+
+// presenting model info
+// print(beetle.model);
+beetle.printModel();
+
+// Class structure
+class Car {
+  // Class properties - Variables
+  String model = '';
+  int hp = 0;
+  int year = 0;
+
+  // Class procedures - Method/ Functions
+  void printModel() {
+    print('The model name is: ${this.model}');
+  }
+}
 ~~~
