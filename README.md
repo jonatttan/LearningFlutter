@@ -369,25 +369,43 @@ String showOptionDescription(int code) => (code == 34 ? 'Open' : 'Close');
 
 ## Objects in Dart
 
+### Creating class, instantiate and handling object:
 ~~~Dart
 // Instantiating object
 Car beetle = new Car();
 
 // Configuring object
 beetle.model = 'New Beetle';
-beetle.hp = 120;
 beetle.year = 2015;
 
 // presenting model info
-// print(beetle.model);
+print(beetle.model);
+
+// Class structure
+class Car {
+
+  // Class properties - Variables
+  String model = '';
+  int year = 0;
+}
+~~~
+
+### Adding procedures:
+~~~Dart
+// Instantiating object
+Car beetle = new Car();
+
+// Configuring object
+beetle.model = 'New Beetle';
+
+// presenting model info
 beetle.printModel();
 
 // Class structure
 class Car {
+
   // Class properties - Variables
   String model = '';
-  int hp = 0;
-  int year = 0;
 
   // Class procedures - Method/ Functions
   void printModel() {
@@ -395,3 +413,85 @@ class Car {
   }
 }
 ~~~
+
+### Creating and use constructor:
+~~~Dart
+// Instantiating and configuring object
+Car beetle = new Car('New Beetle', 2014);
+
+// presenting model info
+beetle.printModel();
+
+// Class structure
+class Car {
+
+  // Class properties - Variables
+  String model = '';
+  int year = 0;
+
+  Car(String model, int year) {
+    this.model = model;
+    this.year = year;
+  }
+
+  // Class procedures - Method/ Functions
+  void printModel() {
+    print('Model name: ${this.model}; \nYear of manufacture: ${this.year}');
+  }
+}
+~~~
+
+### Another way to use the constructor:
+~~~Dart
+// Instantiating and configuring object
+Car beetle = new Car('New Beetle', 2014);
+
+// Class structure
+class Car {
+
+  // Class properties - Variables
+  String model = '';
+  int year = 0;
+
+  Car(this.model, this.year);
+}
+~~~
+
+### Get and Set:
+Obs: Only use when you want implements control.
+~~~Dart
+// Instantiating and configuring object
+Car vitara = new Car('Vitara', 2014);
+Car monza = new Car('Monza', 1997);
+
+print(vitara.model);
+print(monza.model);
+
+// Class structure
+class Car {
+
+  // Class properties - Variables
+  String _model = '';
+  int year = 0;
+
+  // Change the constructor to use set method
+  Car(String model, this.year) {
+    this.model = model;
+  }
+
+  void set model(String model) {
+    if(model == 'Vitara') {
+      this._model = 'GM Tracker';
+    } else { 
+      this._model = model;
+    }
+  }
+
+  String get model {
+    return this._model;
+  }
+  
+}
+~~~
+
+
