@@ -494,4 +494,69 @@ class Car {
 }
 ~~~
 
+### Inheritance:
+~~~Dart
 
+Vehicle generic = new Vehicle('Robust', 544);
+generic.resume();
+
+Car vectra = new Car('GM Vectra', 135, 4, 5);
+vectra.resume();
+  
+class Vehicle {
+  String model = '';
+  int hp = 0;
+
+  Vehicle(this.model, this.hp);
+
+  void resume() {
+    print('Model: ${this.model}\nHorse Power: ${this.hp}');
+  }
+}
+
+class Car extends Vehicle {
+
+  int ports = 0;
+  int places = 0;
+
+  Car(model, hp, this.ports, this.places) : super(model, hp);
+
+}
+~~~
+
+
+### Inheritance with super and @override:
+
+~~~Dart
+Vehicle generic = new Vehicle('Robust', 544);
+generic.resume();
+
+Car vectra = new Car('GM Vectra', 135, 4, 5);
+vectra.resume();
+
+class Vehicle {
+  String model = '';
+  int hp = 0;
+
+  Vehicle(this.model, this.hp);
+
+  void resume() {
+    print('\nModel: ${this.model}\nHorse Power: ${this.hp}');
+  }
+}
+
+class Car extends Vehicle {
+
+  int ports = 0;
+  int places = 0;
+
+  Car(model, hp, this.ports, this.places) : super(model, hp);
+  
+  @override
+  void resume() {
+    super.resume();
+    print('Ports: ${this.ports}\nPlaces: ${this.places}\n');
+  }
+
+}
+~~~
