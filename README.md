@@ -526,7 +526,6 @@ class Car extends Vehicle {
 
 
 ### Inheritance with super and @override:
-
 ~~~Dart
 Vehicle generic = new Vehicle('Robust', 544);
 generic.resume();
@@ -546,7 +545,6 @@ class Vehicle {
 }
 
 class Car extends Vehicle {
-
   int ports = 0;
   int places = 0;
 
@@ -559,4 +557,39 @@ class Car extends Vehicle {
   }
 
 }
+~~~
+
+### Static use:
+What's static? Static allow access an internal features without instantiate the class
+~~~Dart
+print(Bakery.wheatBreadPrice);
+//   print(Bakery.amountInCash); // Don't works
+print(Bakery.getPriceToBreads(4));
+
+class Bakery {
+  static double wheatBreadPrice = 0.13;
+  double amountInCash = 435.95;
+
+  static double getPriceToBreads(int breads) => wheatBreadPrice * breads;
+}
+~~~
+
+### Const and final:
+Both are immutable, but have their particularities
+
+Use const for values know at program time, final works, but prefer const.
+When used in the class, static const
+~~~Dart
+const int bornDay = 3; // Const don't works for this
+// final int bornDay = 3; 
+
+print(bornDay);
+~~~
+
+Use final for values don't know at program time.
+~~~Dart
+// const DateTime a = new DateTime.now(); // Const don't works for this
+final DateTime registerTime = new DateTime.now(); 
+
+print(registerTime);
 ~~~
