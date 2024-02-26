@@ -636,3 +636,24 @@ abstract class Vehicle {
   void showHpStatus(); // Functioning as a kind of protocol
 }
 ~~~
+
+## Lists in Dart
+
+~~~Dart
+List<String> carOptions = ['Opel Omega 3.8 V6', 'Opel Vectra Millenium 2.2', 'VW Golf GTI 2.0 TSi', 'Ford Fusion'];
+
+print(carOptions); // Print list content
+print(carOptions.length); // Print list size
+print(carOptions[0]); // Print first content of list
+print(carOptions.contains('Ford Fusion')); // Print if contains Ford Fusion on the list
+carOptions.add('Dodge challenger SRT'); // Adding 'Dodge challenger SRT' into the list
+carOptions.insert(2, 'Ford Fiesta'); // Insert 'Ford Fiesta' on the third position on the list
+carOptions.removeAt(4); // Remove value to the fifth position
+print(carOptions.indexOf('VW Golf GTI 2.0 TSi')); // Print position number on the list where value equals 'VW Golf GTI 2.0 TSi'
+print(carOptions[carOptions.length-1]); // Print last position content
+print(carOptions.last); // Too print last position content
+
+carOptions.forEach((String model) { // Printing each content of the list
+  print(model);
+});
+~~~
