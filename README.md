@@ -560,7 +560,7 @@ class Car extends Vehicle {
 ~~~
 
 ### Static use:
-What's static? Static allow access an internal features without instantiate the class
+What's static? Static allow access an internal features without instantiate the class.
 ~~~Dart
 print(Bakery.wheatBreadPrice);
 //   print(Bakery.amountInCash); // Don't works
@@ -592,4 +592,47 @@ Use final for values don't know at program time.
 final DateTime registerTime = new DateTime.now(); 
 
 print(registerTime);
+~~~
+
+### Abstract class:
+Used like a model class, we prevent it from being instantiated, defining that as an abstract class.
+~~~Dart
+Motocycle sahara = new Motocycle('Sahara', 35);
+print('Model: ${sahara.model}, HP level: ${sahara.hp}');
+sahara.showHpStatus();
+
+Car mustang = new Car('Mustang GT', 350);
+print('Model: ${mustang.model}, HP level: ${mustang.hp}');
+mustang.showHpStatus();
+
+//   It's not possible, because now Vehicle is an abstract class
+//   Vehicle bus = new Vehicle('Marcopolo 235', 300);
+//   print('Model: ${bus.model}, potencia: ${bus.hp}');
+
+class Car extends Vehicle {
+  Car(String model, int hp) : super(model, hp);
+  
+  @override
+  void showHpStatus() {
+    print('HP level: ${this.hp < 150 ? 'Low' : 'High'}');
+  }
+}
+
+class Motocycle extends Vehicle {
+  Motocycle(String model, int hp) : super(model, hp);
+  
+  @override
+  void showHpStatus() {
+    print('HP level: ${this.hp < 50 ? 'Low' : 'High'}');
+  }
+}
+
+abstract class Vehicle {
+  String model = '';
+  int hp = 0;
+
+  Vehicle(this.model, this.hp);
+  
+  void showHpStatus(); // Functioning as a kind of protocol
+}
 ~~~
