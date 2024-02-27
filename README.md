@@ -639,6 +639,7 @@ abstract class Vehicle {
 
 ## Lists in Dart
 
+### Simple string list:
 ~~~Dart
 List<String> carOptions = ['Opel Omega 3.8 V6', 'Opel Vectra Millenium 2.2', 'VW Golf GTI 2.0 TSi', 'Ford Fusion'];
 
@@ -656,4 +657,34 @@ print(carOptions.last); // Too print last position content
 carOptions.forEach((String model) { // Printing each content of the list
   print(model);
 });
+~~~
+
+### Object list:
+~~~Dart
+List<Book> books = [Book('iWoz', 2006), Book('Steve Jobs', 2011)];
+
+print(books.length); // Print list size
+print(books[0].name); // Print the name of the first content in the list
+books.add(Book('Orange is the new black', 2010)); // Adding new book into the list at last position
+books.insert(0, Book('Sapiens', 2014)); // Insert new book on the first position on the list
+books.removeAt(3); // Remove book to the fourth position
+print(books[books.length-1].name); // Print last position content book name
+print(books.last.name); // Too print last position content book name
+
+books.forEach((Book book) {
+  print(book.name);
+});
+  
+books.forEach((Book book) => print('${book.name} - ${book.year}'));
+
+class Book {
+  String name = '';
+  int year = 0;
+
+  Book(this.name, this.year);
+
+  void showInfo() {
+    print('Name: ${this.name}, \nYear: ${this.year}\n');
+  }
+}
 ~~~
