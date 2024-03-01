@@ -688,3 +688,25 @@ class Book {
   }
 }
 ~~~
+
+## Dictionary (Map)
+
+~~~Dart
+Map<int, String> homeOptions = Map();
+  
+  homeOptions[0] = 'AP'; // Adding map key/ values
+  homeOptions[1] = 'House';
+  homeOptions[2] = 'Studio';
+  
+  print(homeOptions);
+  print(homeOptions.keys);
+  print(homeOptions.values);
+  print(homeOptions[1]);
+
+  const homeColors = {40: 'gray', 41: 'white', 42: 'Yellow', 43: 'Blue'};
+
+  print(homeColors);
+  homeOptions.addAll(homeColors); // Add all content in the homeColors to homeOptions
+  homeOptions.remove(1); // Removing key and value where key equals 1
+  homeColors.clear(); // Removing all values
+~~~
