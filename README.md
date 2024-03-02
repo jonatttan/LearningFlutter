@@ -845,3 +845,35 @@ print('The number ' + (pi.isNegative ? 'is negative' : 'isn\'t negative'));
  print('First name: ${listName[0]}');
  print('Last name: ${listName[listName.length-1]}');
  ~~~
+
+ ## Enum
+
+ ~~~Dart
+ enum Fruit {
+  Banana,
+  Apple,
+  Pineaple,
+  Orange
+ }
+
+ //Sample use:
+ Fruit fruit = Fruit.Apple;
+
+ switch(fruit) {
+   case Fruit.Banana:
+   print('Did you get banana');
+   break;
+
+   case Fruit.Apple:
+   print('Did you get apple');
+   break;
+
+   case Fruit.Pineaple:
+   print('Did you get pineaple');
+   break;
+
+   case Fruit.Orange:
+   print('Did you get orange');
+   break;
+ }
+ ~~~
