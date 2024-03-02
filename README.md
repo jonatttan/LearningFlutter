@@ -710,3 +710,66 @@ Map<int, String> homeOptions = Map();
   homeOptions.remove(1); // Removing key and value where key equals 1
   homeColors.clear(); // Removing all values
 ~~~
+
+## Handling numbers
+
+### Absolute value (abs):
+~~~Dart
+double pi = -3.1415;
+print(pi.abs()); // With .abs() the result will aways be positive
+~~~
+
+### Parse to int (toInt):
+~~~Dart
+double pi = 3.1415;
+print(pi.toInt());
+~~~
+
+### Truncate:
+~~~Dart
+double pi = 3.1415;
+print(pi.truncate()); // Similarity with toInt
+~~~
+
+### Parse to string (toString):
+~~~Dart
+double pi = 3.1415;
+print('Pi value: ' + pi.toString());
+~~~
+
+### Parse to string limit cases (toStringAsFixed):
+~~~Dart
+double pi = 3.1415;
+print('Pi value fixed: ' + pi.toStringAsFixed(2)); // Limit the decimal cases after point
+~~~
+
+### Round down (floor):
+~~~Dart
+double pi = 3.1415;
+print(pi.floor());
+~~~
+
+### Round up (ceil):
+~~~Dart
+double pi = 3.1415;
+print(pi.ceil());
+~~~
+
+### Between A and B (clamp):
+~~~Dart
+double pi = 3.1415;
+print(pi.clamp(2,3)); // Find the closest integer number between A and B
+print(pi.clamp(2,3));
+~~~
+
+### Round:
+~~~Dart
+double pi = 3.1415; // For example: Up to 1.49, it tends to be 1, above that, it tends to be 2.
+print(pi.round());
+~~~
+
+### check if is negative (isNegative):
+~~~Dart
+double pi = 3.1415;
+print('The number ' + (pi.isNegative ? 'is negative' : 'isn\'t negative'));
+~~~
