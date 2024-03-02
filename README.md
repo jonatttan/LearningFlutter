@@ -773,3 +773,75 @@ print(pi.round());
 double pi = 3.1415;
 print('The number ' + (pi.isNegative ? 'is negative' : 'isn\'t negative'));
 ~~~
+ 
+ ## Handling strings
+
+ ### Upper case:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.toUpperCase);
+ ~~~
+ 
+### Lower case:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.toLowerCase);
+ ~~~
+
+### Remove the unnecessary empty spaces:
+ ~~~Dart
+ String name = '    Chuck Norris     ';
+ print('[$name]');
+ name = name.trim(); // remove all unnecessary spaces
+ name = name.trimLeft(); // remove all left unnecessary spaces
+ name = name.trimRight(); // remove all right unnecessary spaces
+ print('[$name]');
+ ~~~
+
+### Check length:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.length);
+ ~~~
+
+### Fix length:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ name = name.padLeft(20, 'x'); // if length less than 20, add x to left until reaching 20
+ name = name.padRight(30, 'x'); // if length less than 30, add x to right until reaching 30
+ print(name);
+ ~~~
+
+### Check if contains:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.contains('ck'));
+ ~~~
+
+### get substring:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.substring(2, 4));
+ ~~~
+
+### get index of character:
+ ~~~Dart
+ String name = 'Chuck Norris';
+ print(name.indexOf(' '));
+
+ // With this, we can do...
+ print('First name: ${name.substring(0, name.indexOf(' '))}');
+ ~~~
+
+### split words:
+ ~~~Dart
+ String name = 'James Earl Jones';
+ print(name.split(' '));
+
+ // With this, we can do...
+ List<String> listName;
+ listName = (name.split(' '));
+ print(listName);
+ print('First name: ${listName[0]}');
+ print('Last name: ${listName[listName.length-1]}');
+ ~~~
