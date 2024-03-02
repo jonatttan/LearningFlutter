@@ -818,13 +818,13 @@ print('The number ' + (pi.isNegative ? 'is negative' : 'isn\'t negative'));
  print(name.contains('ck'));
  ~~~
 
-### get substring:
+### Get substring:
  ~~~Dart
  String name = 'Chuck Norris';
  print(name.substring(2, 4));
  ~~~
 
-### get index of character:
+### Get index of character:
  ~~~Dart
  String name = 'Chuck Norris';
  print(name.indexOf(' '));
@@ -833,7 +833,7 @@ print('The number ' + (pi.isNegative ? 'is negative' : 'isn\'t negative'));
  print('First name: ${name.substring(0, name.indexOf(' '))}');
  ~~~
 
-### split words:
+### Split words:
  ~~~Dart
  String name = 'James Earl Jones';
  print(name.split(' '));
