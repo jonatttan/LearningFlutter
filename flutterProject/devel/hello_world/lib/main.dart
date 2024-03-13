@@ -4,10 +4,15 @@ void main() {
   // runApp(const MyApp());
   runApp(
     MaterialApp(
-      home: Center(
-        child: Text(
-          'Hello world!',
-          style: TextStyle(fontSize: 30, color: Colors.blue),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Aplicativo teste'),
+        ),
+        body: Center(
+          child: Text(
+            'Hello world!',
+            style: TextStyle(fontSize: 30, color: Colors.blue),
+          ),
         ),
       ),
     ),
