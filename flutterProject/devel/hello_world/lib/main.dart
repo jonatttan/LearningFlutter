@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp(title: "My app title"));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final String title;
+
+  const MyApp({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-            'App test',
+            this.title,
             style: TextStyle(color: Colors.black54),
           ),
         ),
