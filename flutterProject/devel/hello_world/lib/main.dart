@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp(title: "My app title"));
+  const int val = 10;
+
+  runApp(const MyApp(title: "My app title", value: val));
 }
 
 class MyApp extends StatelessWidget {
   final String title;
+  final int value;
 
-  const MyApp({Key? key, required this.title}) : super(key: key);
+  const MyApp({Key? key, this.title = '', this.value = 0}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            'Hello World',
+            'Hello World! The value is ' + this.value.toString(),
             style: TextStyle(fontSize: 20, color: Colors.pinkAccent),
           ),
         ),
