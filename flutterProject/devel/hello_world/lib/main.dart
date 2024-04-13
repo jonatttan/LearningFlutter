@@ -15,14 +15,18 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int salary = 2000;
 
+  void increasingSalary(int value) {
+    setState(() {
+      this.salary += value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
         onTap: () {
-          setState(() {
-            salary += 100;
-          });
+          increasingSalary(50);
           print('salary: $salary');
         },
         child: Text(
