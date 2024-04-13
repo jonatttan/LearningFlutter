@@ -11,4 +11,4 @@ Are widget with two objects, Widget and State.
 Widget store the imutable attributes, State store the mutables. 
 We change the mutable variable `salary` and refresh screen using `setState` on the `GestureDetector`.
 
-![Stateful widget video](prints/statefulWidget.mov)
+![Stateful widget video](prints/statefulWidget.gif)
