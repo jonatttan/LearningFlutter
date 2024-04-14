@@ -1,4 +1,4 @@
-[Flutter project readme](flutterProject/flutterProject.md)
+[Flutter projects readme](flutterProject/flutterProject.md)
 
 # Learning Flutter
 

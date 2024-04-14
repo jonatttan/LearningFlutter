@@ -1,16 +1,6 @@
 # flutter_layout_scaffold
 
-A new Flutter project.
+### Scaffold 1
+Using Scaffold (pt andaime), we build a widget with title and color (on appBar attribute) and text body (on the body attribute).
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Scaffold 1 image](../prints/layoutScaffold1.png)
