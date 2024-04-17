@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.blue,
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
               child: Text(
