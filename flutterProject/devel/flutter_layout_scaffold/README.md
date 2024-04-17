@@ -6,6 +6,6 @@ Using Scaffold (pt andaime), we build a widget with title and color (on appBar a
 <img src="../../prints/layoutScaffold1.png" alt="drawing" width="200"/>
 
 ### Layout 2
-Using alignment in row with mainAxisAlignment. Possible values: start, end, center, spaceBetween, spaceArround, spaceEvenly.
+Using mainAxisAlignment, which aligns each element in the row. Possible values: start, end, center, spaceBetween, spaceArround, spaceEvenly.
 
-<img src="../../prints/layout2RowAlignment.png" alt="drawing" width="400"/>
+<img src="../../prints/layout2RowAlignmentCode.png" alt="drawing" width="200"/> <img src="../../prints/layout2RowAlignment.png" alt="drawing" width="400"/>
