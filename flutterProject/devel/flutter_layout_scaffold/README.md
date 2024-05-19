@@ -16,6 +16,7 @@ Important: In the row, Main Axis is horizontally alignment and Cross Axis is the
 
 ### Layout 3
 Using mainAxisAlignment, which aligns each element in the column. Possible values: start, end, center, spaceBetween, spaceArround, spaceEvenly.
+
 <img src="../../prints/layout3ColumnAlignment.png" alt="drawing" width="200"/> <img src="../../prints/layout3ColumnAlignmentSlide.png" alt="drawing" width="400"/>
 
 Important: In the column, Main Axis is vertically alignment and Cross Axis is the horizontally alignment.
