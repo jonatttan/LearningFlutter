@@ -20,19 +20,25 @@ class _MyAppState extends State<MyApp> {
           title: Text('Application sample Scaffold'),
           backgroundColor: Colors.blue,
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Center(
               child: Text(
-                'My app',
-                style: TextStyle(fontSize: 30),
+                'Banana',
+                style: TextStyle(fontSize: 40),
               ),
             ),
             Center(
               child: Text(
-                ', the simple app',
-                style: TextStyle(fontSize: 25),
+                'Apple',
+                style: TextStyle(fontSize: 40),
+              ),
+            ),
+            Center(
+              child: Text(
+                'Pineapple',
+                style: TextStyle(fontSize: 40),
               ),
             ),
           ],
