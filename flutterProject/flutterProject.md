@@ -1,14 +1,9 @@
-### Stateless Widget
-Are widget with one object, itself.
-Stateless widget don't have changes, non interactables.
-Until commit 725a226, we build stateless widget, as the below picture:
+# Summary
 
-![Stateless widget image](prints/statelessWidget.png)
+### Stateless and Stateful Widget
 
+[Stateless and Stateful Widget](devel/hello_world/README.md)
 
-### Stateful Widget
-Are widget with two objects, Widget and State.
-Widget store the imutable attributes, State store the mutables. 
-We change the mutable variable `salary` and refresh screen using `setState` on the `GestureDetector`.
+### Layout with Scaffold
 
-![Stateful widget video](prints/statefulWidget.gif)
+[Layout with Scaffold](devel/flutter_layout_scaffold/README.md)
